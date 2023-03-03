@@ -1,0 +1,15 @@
+def count_substring_occurrences(string, substring):
+    count = 0
+    i = string.find(substring)
+    while i != -1:
+        count += 1
+        i = string.find(substring, i+1)
+    return count
+
+string1 = input()
+string2 = input()
+
+count1 = count_substring_occurrences(string1, string2)
+count2 = count_substring_occurrences(string2, string1)
+
+print(count1 + count2)
